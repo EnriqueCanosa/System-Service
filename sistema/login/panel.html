@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovare Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.inovaretextil.com/sistema/layout/icon.png">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <!-- MENU SUPERIOR -->
+    <div id="menu-superior"></div>
+    <script src="../include/confereLogin.js"></script>
+    <script src="../include/addMenu.js"></script>
+    
+    <div class="logo-container">
+        <div class="logopn"></div>
+    </div>
+    
+    <div class="menuText" id="menuText">
+        <h1 id="welcome"></h1>
+        <h3 id="access"></h3>
+    </div>
+
+    <div class="menu" id="menu"></div>
+
+    <script>
+        function renderPanel() {
+            let user = getUserData();
+
+            document.getElementById('welcome').textContent = `Welcome to Panel, ${user.nome}`;
+            document.getElementById('access').textContent = `Access: ${user.tipo}`;
+
+            let menu = document.getElementById('menu');
+
+            if (user.funcao == 0) {
+                menu.innerHTML = `
+                    <a href="../consult/">
+                        <div class="item">
+                            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <p>Consultation</p>
+                        </div>
+                    </a>
+                    <a href="../service/">
+                        <div class="item">
+                            <div class="icon"><i class="fa-solid fa-star"></i></div>
+                            <p>Customer Service</p>
+                        </div>
+                    </a>
+                    <a href="../register/">
+                        <div class="item">
+                            <div class="icon"><i class="fa-solid fa-address-card"></i></div>
+                            <p>Register Infos</p>
+                        </div>
+                    </a>
+                    <a href="../edit/">
+                        <div class="item">
+                            <div class="icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                            <p>Edit Infos</p>
+                        </div>
+                    </a>
+                `;
+            } else if (user.funcao == 1) {
+                menu.innerHTML = `
+                    <a href="../consult/">
+                        <div class="item">
+                            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <p>Consultation</p>
+                        </div>
+                    </a>
+                `;
+            } else if (user.funcao == 2 || user.funcao == 3) {
+                menu.innerHTML = `
+                    <a href="../consult/">
+                        <div class="item">
+                            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <p>Consultation</p>
+                        </div>
+                    </a>
+                    <a href="../service/">
+                        <div class="item">
+                            <div class="icon"><i class="fa-solid fa-star"></i></div>
+                            <p>Customer Service</p>
+                        </div>
+                    </a>
+                `;
+            }
+        }
+
+        renderPanel();
+    </script>
+</body>
+</html>

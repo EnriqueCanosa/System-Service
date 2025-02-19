@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="icon" href="https://www.inovaretextil.com/sistema/layout/icon.png">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"> </script>
+</head>
+<body>
+    <!-- MENU SUPERIOR -->
+    <div id="menu-superior"></div>
+    <script src="../include/confereLogin.js"></script>
+    <script src="../include/addMenu.js"></script>
+    <!---->
+
+    <a href="https://www.inovaretextil.com/sistema/login/panel.html">
+        <div class='logo-container'>
+            <div class="logo"></div>
+            <span class="hover-text">Back to Home Panel <i class="fa-solid fa-house"></i></span>
+        </div>
+    </a>
+    <h1 id="welcome" style="margin-top: 40px; color: white; text-align:center"></h1>
+    <h3 id="access" style="margin-top: 10px; color: white; text-align:center"></h3>
+
+    <div class="menu" id="menu">
+        <div class="item" id="MyServiceButton"> 
+            <div class="icon"><i class="fa-solid fa-stamp"></i></div>
+            <p>My services</p>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="item" id="newServiceButton"> 
+            <div class="icon"><i class="fa-solid fa-folder-plus"></i></div>
+            <p>New service</p>
+        </div>
+    </div>
+
+    <div id="newServiceModal" class="modal">
+        <div class="formContainer">
+            <div id="closeButtonNew" class="closeButton"> CLOSE <i class="fa-regular fa-circle-xmark"></i></div>
+            <form id="newServiceForm" class="newServiceForm" action="newService.php">
+                <img class="formLogo" src="../layout/logo_bl2.png">
+
+                <input required id="costumer" name="costumer" type="text" placeholder="Company Costumer" class="title-input">
+            
+                <input required id="representative" name="representative" type="text" placeholder="Company Representative">
+            
+                <input required id="infos" name="infos" type="text" placeholder="Additional info">
+            
+                <button type="button" id="submitButton">
+                    <span id="buttonText">Create Service <i class="fa-regular fa-calendar-plus"></i></span>
+                </button>
+
+                <div class="msg"></div>
+            </form>
+        </div>
+    </div>
+      
+    <div id="myServiceModal" class="modal">
+        <div class="formContainer">
+            <div id="closeButtonMy" class="closeButton"> CLOSE <i class="fa-regular fa-circle-xmark"></i></div>
+            <div class="myServiceList">
+                <div class="msg"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="infoServiceModal" class="modal">
+        <div class="formContainer">
+            <div id="closeButtonInfo" class="closeButton"> CLOSE <i class="fa-regular fa-circle-xmark"></i></div>
+            <div class="myServiceInfo">
+                <div class="serviceCardInfo">
+                    <div class="serviceHeader">
+                        <h2 class="costumer"></h2>
+                        <span class="date"></span>
+                    </div>
+                    <div class="representative"> </div>
+                    <p style="font-size: 18px; margin: 10px; text-align: center; font-weight: bold; color: #333;">CODE LIST</p>
+                    <ul class="codesInfo">
+                        <li></li>
+                    </ul>
+                    <div id="infoButtonEdit" class="infoButton edit">EDIT SERVICE<i class="fa fa-pencil"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

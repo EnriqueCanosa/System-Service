@@ -1,0 +1,203 @@
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-image: linear-gradient(135deg, #0c0c0c 10%, #242424 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+  margin: 0 0 80px 0;
+}
+  
+/* ########################################################################### LOGIN ###########################################################################*/
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('https://www.inovaretextil.com/sistema/layout/showroom.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-form {
+  display: flex;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+  width: 100%;
+  max-width: 800px;
+  flex-direction: column;
+}
+
+.logo img {
+  display: block;
+  margin: 0 auto 20px;
+  width: 250px; /* Adjust size as needed */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.show-password {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  cursor: pointer;
+  color: #007BFF;
+  font-size: 0.8em;
+  padding: 10px 0;
+}
+
+.show-password i {
+  margin-right: 5px;
+}
+
+.btnLogin {
+  cursor: pointer;
+  font-family: 'Montserrat';
+  margin: 1px auto;
+  color: #fff;
+  font-size: 18px;
+  padding: 15px 40px;
+  border-radius: 50px;
+  border: 0;
+  outline: 0;
+  background-image: linear-gradient(191deg, #0c0c0c 10%, #5d5d5d 100%);
+  transition: background-size 0.5s; 
+}
+
+.btnLogin:hover {
+  background-image: radial-gradient(circle, #5d5d5d, #0c0c0c); 
+}
+
+.warning{
+  text-align: center;
+  margin: 20px;
+  color: #930000;
+  font-weight: 600;
+}
+
+
+/* ################################## PAINEL ########################################*/
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.logopn{
+  width: 300px;
+  height: 59px;
+  margin: 20px auto;
+	background-image: url(https://www.inovaretextil.com/sistema/layout/logo_wt2.png);
+	background-position: center;
+  background-size: cover;
+}
+
+.menu {
+  margin: 0 auto;
+  display: flex;
+  gap: 5px;
+  width: 80%;
+  max-width: 500px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#menuText{
+  text-align: center;
+  width: 80%;
+  max-width: 800px;
+  margin: 60px auto;
+  color: white;
+}
+
+#welcome {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#access {
+  font-size: 16px;
+}
+
+.item {
+  background-color: white;
+  border: 2px solid #ddd;
+  /* border-radius: 10px; */
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efeito ao passar o mouse */
+}
+
+.icon {
+  font-size: 40px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.item p {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+
+
+@media (max-width: 768px) {
+  .menu {
+
+  }
+
+  .item {
+
+  }
+
+  .icon {
+
+  }
+
+  .item p {
+
+  }
+
+  #menuText{
+    margin: 20px auto;
+  }
+}

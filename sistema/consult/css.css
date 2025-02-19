@@ -1,0 +1,773 @@
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    src: url(../layout/fonts/Montserrat-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold; 
+    src: url(../layout/fonts/Montserrat-Bold.ttf) format("truetype");
+}
+/* =---------------------- index.html --------------------------= */
+
+A{
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
+A:hover{
+	font-weight: bold;
+	color: rgb(63, 63, 63);
+}
+
+body {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-image: linear-gradient(135deg, #0c0c0c 10%, #242424 100%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo{
+	width: 300px;
+	height: 59px;
+	background-image: url(https://www.inovaretextil.com/sistema/layout/logo_wt.png);
+	background-position: center;
+    background-size: cover;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.logo:hover {
+	opacity: 0.3;
+}
+
+.hover-text {
+    opacity: 0;
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.6s ease;
+    pointer-events: none;
+}
+
+.logo:hover + .hover-text {
+    opacity: 1;
+}
+
+.form-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+   	justify-content: center;
+}
+
+.search-container {
+    font-family: 'Montserrat';
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px, rgba(0, 0, 0, 0.28) 0px 6px 6px;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 60px 0;
+}
+
+.search-container h2{
+    margin: 10px 0;
+}
+
+input[type="text"],input[type="date"], .comboBox{
+    font-family: 'Montserrat';
+    width: 90%;
+    font-size: 18px;
+    margin: 0 0 8px 0;
+    padding: 10px;
+    color: black;
+    outline: none;
+    overflow: hidden;
+    border: 2px solid #B0B3B9;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.esconde{
+	display: none;
+}
+
+.botaoArquivo{
+    font-family: 'Montserrat';
+	text-align: center;
+    width: 80%;
+    border-radius: 5px;
+    border: #0c0c0c dashed 3px;
+    padding: 15px 0;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .5s;
+}
+
+input[type="file"]{
+	display:none;
+}
+
+.uploadButton {
+    font-family: 'Montserrat';
+	width: auto;
+	background-color:#000000;
+	color: #fafafa;
+	display: flex;
+	align-items: center;
+	font-size: 22px;
+	border: none;
+	border-radius: 20px;
+    padding: 12px 20px;
+	cursor: pointer;
+	margin: 15px;
+	transition: 0.5s ease;
+}
+
+.uploadButton:hover{
+    background-color: #3b3b3b;
+}
+
+.moreButton{
+	width: auto;
+	background-image: linear-gradient(135deg, #3c3c3c 10%, #656565 100%);
+	color: #fafafa;
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 25px;
+	cursor: pointer;
+	margin:10px;
+	transition: .5s;
+}
+
+.downloadButton {
+	user-select:none;
+	background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	font-size: 15px;
+	border: none;
+	border-radius: 20px;
+	padding: 15px 50px;
+	cursor: pointer;
+	margin: 15px auto;
+	transition: .5s;
+	text-decoration: none;
+}
+
+.downloadButton:hover{
+	background-color: rgba(172, 170, 170, 0.89);
+}
+
+/* =---------------------- results.html --------------------------= */
+
+.getAllArea {
+    font-size: 20px;
+    display: flex;
+    color: white;
+    margin: 20px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
+}
+
+#selectAllCodes{
+    gap: 15px;
+    text-align: center;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #e08b7e;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    flex-direction: row;
+    align-items: center;
+}
+
+.codesIconArea {
+    position: fixed;
+    top: 80px;
+    right: -100px;
+	transition: all 0.3s ease;
+	z-index: 10;
+}
+
+.codesIcon {
+	cursor: pointer;
+	opacity: 0.95;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #eeeaea;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	font-size: 30px;
+	transition: all 0.3s ease;
+    color: rgb(43, 43, 43);
+}
+
+.codesIcon:hover {
+	opacity: 100;
+    background-color: #bbbaba;
+	font-size: 33px;
+}
+
+.codesIconNumber {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 658px) {
+
+	.codesIconArea {
+		position: fixed;
+		top: calc(100% - 75px);
+		right: 10px;
+	}
+
+	.codesIcon {
+		width: 50px;
+		height: 50px;
+	}
+
+	.codesIcon i {
+		font-size: 25px;
+	}
+
+	.codesIconNumber {
+		font-size: 10px;
+		width: 7px;
+		height: 7px;
+	}
+}
+
+#resultsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.resultItem {
+	cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.resultHeader {
+    background: #e5e5e5;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px 8px 0 0;
+}
+
+.resultHeader h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.resultBody {
+	background: #fff;
+	transition: background-color 0.3s;
+    padding: 10px;
+	min-height: 140px;
+	display: flex;
+	flex-direction: column;
+}
+
+.resultBody:hover {
+	background-color: #e5e5e5;
+}
+
+.resultBody p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.img {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+	margin: 20px auto 0;
+    border-radius: 15px;
+}
+
+.resultButtonsArea {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+	align-items: center;
+}
+
+.resultButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    transition: transform 0.3s;
+    height: 30px;
+    font-size: 1.2em;
+}
+
+.resultButton:hover{
+	transform: translateY(-5px);
+}
+
+.resultAdd{
+    border-radius: 0 0 8px 8px;
+    background-color: #e08b7e;
+}
+
+.resultEdit{
+	border-left: 1px solid black;
+	border-radius: 0 0 8px 0;
+	background-color: #e08b7e;
+}
+
+
+.noResultsBox {
+	text-align: center;
+    font-size: 29px;
+    border-radius: 15px;
+    padding: 30px 15px;
+    background-color: white;
+    color: #88283e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    gap: 15px;
+}
+
+.noResultsBackButton {
+    width: auto;
+    background-color: #5d5d5d;
+    color: #fafafa;
+    display: flex;
+    align-items: center;
+	gap: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+/* =---------------------------- code list ----------------------------= */
+
+.codeListContent{
+    background-color: #444;
+    margin: 15px auto;
+    padding: 15px 10px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1200px;
+    color: #fff;
+}
+
+.codeListContainer{
+    padding: 0 15px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+
+/* ================================ MENU DROPDOWN ================================= */
+.codeListMainMenu {
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.codeListMainMenuItem {
+    display: flex;
+    width: 100%;
+    min-width: 140px;
+    flex-direction: column;
+}
+
+.codeListMainMenuButton {
+    opacity: 0.8;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.codeListMainMenuButton:hover {
+    opacity: 1.0;
+}
+
+.codeListDropdownContent {
+    display: none;
+}
+
+.codeListDropdownButton {
+    opacity: 1.0;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #444;
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.codeListDropdownButton:hover {
+    background-color: #1a1a1a;
+}
+
+/* ============================================================================= */
+
+#codeListRemoveAll{
+    opacity: 0.8;
+    gap: 15px;
+    text-align: center;
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+    flex-direction: row;
+    align-items: center;
+}
+
+#codeListRemoveAll:hover{
+    opacity: 1.0;
+}
+
+
+.codeListItem{
+    background-color: white;
+    color: #0c0c0c;
+    border-radius: 15px;
+    width: 100%;
+    padding: 0 0 0 16px;
+    font-size: 14px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.codeListRemove{
+    border: 2px solid darkred;
+    display: flex;
+    background-color: mistyrose;
+    color: darkred;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 0 10px 10px 0;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s ease;
+    width: 70px;
+    cursor: pointer;
+}
+
+.codeListRemove:hover{
+    background-color: rgb(244, 226, 226);
+    width: 100px;
+}
+
+/* =---------------------------- one page ----------------------------= */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    overflow-y: auto;
+}
+
+.onePageContent{
+    background-color: #444;
+    margin: 15px auto; 
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1200px;
+    color: #fff;
+}
+
+.onePageInfoContainer{
+    text-align: center;
+}
+
+.onePageInfoContainer p{
+    margin: 10px 0;
+    /* border-bottom: 1px solid #ffffff; */
+}
+
+.onePageImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.onePageImgContainer img {
+    width: auto; 
+    height: auto; 
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+.onePageButtonArea{
+    display: flex;
+	flex-wrap: wrap;
+    margin: 20px auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.onePageButton{
+	height: 20px;
+	opacity: 0.9;
+    font-weight: bold;
+
+    text-align: center;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+
+	transition: all 0.5s ease;
+}
+
+.onePageButton:hover{
+	opacity: 1.0;
+	font-size: 1.01em;
+}
+
+.closeArea{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.close{
+    background-color: #dc3545;
+}
+.add{
+	width:200px;
+	background-color: #498d41;
+}
+.edit{
+	width:200px;
+	background-color: #427a9b;
+}
+
+/* =---------------------------- one page ----------------------------= */
+
+
+@media screen and (max-width: 800px) {
+
+	.results-table{
+		font-size: 10px;
+	}
+
+	input.check{
+		width: 40px;
+		height: 40px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	.selectAllArea span{
+		font-size: 9px
+	}
+
+	.botao{
+		font-size: 9px;
+	}
+
+	.listButton{
+		font-size: 9px;
+    	margin: 1px 0;
+	}
+
+    .codeListMainMenu{
+        flex-wrap: wrap;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+  	.upload-files-container {
+		font-size: 0.8em;
+	}
+
+	input[type="text"]{
+		font-size: 0.8em
+	}
+
+	.logo{
+		width: 200px;
+    	height: 39px;
+	}
+}
+
+/* ================================= SERVICE ============================================ */
+
+#menu-service {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    font-size: 15px;
+    width: 100%;
+    background-color: #f8f9fa; /* Cor neutra e suave */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
+}
+
+.service-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#serviceTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.service-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#serviceCostumer,
+#serviceRep,
+#serviceData {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 0.95em;
+    text-align: center;
+    min-width: 150px;
+    flex: 1;
+}
+
+#serviceRep {
+    border-left: 0;
+}
+
+#serviceData {
+    border-left: 0;
+}
+
+.btn-finish-service {
+    font-weight: bold;
+    font-size: 0.95em;
+    padding: 8px 15px;
+    color: #fff;
+    background-color: #dc3545; /* Vermelho */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-finish-service:hover {
+    background-color: #c82333; /* Tom mais escuro de vermelho */
+}

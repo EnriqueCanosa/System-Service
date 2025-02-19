@@ -1,0 +1,81 @@
+.saveAllBt {
+	user-select:none;
+	background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	font-size: 15px;
+	border: none;
+	border-radius: 20px;
+	padding: 15px 50px;
+	cursor: pointer;
+	margin: 15px auto;
+	transition: .5s;
+	text-decoration: none;
+}
+.saveAllBt:hover{
+    background-color: #c0c0c0;
+}
+.saveOneBt {
+	user-select:none;
+	background-color: #e08b7e;
+	color: rgb(0, 0, 0);
+	font-size: 15px;
+	border: none;
+	border-radius: 20px;
+	padding: 15px 50px;
+	cursor: pointer;
+	margin: 15px auto;
+	transition: .5s;
+	text-decoration: none;
+}
+.saveOneBt:hover{
+    background-color: #dea69e;
+}
+#editContainer{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-group {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+    margin: 5px 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}

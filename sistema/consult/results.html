@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Results Page</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="icon" href="https://www.inovaretextil.com/sistema/layout/icon.png">
+	<link rel="stylesheet" href="css.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="results.js"> </script>
+</head>
+<body>
+    <!-- MENU SUPERIOR -->
+    <div id="menu-superior"></div>
+    <script src="../include/confereLogin.js"> </script>
+    <script src="../include/addMenu.js"> </script>
+    <!---->
+
+    <!-- MENU CASO SERVICE -->
+    <div id="menu-service" style="display:none">
+        <div class="service-container">
+            <div id="serviceTitle">Service Mode</div>
+            <div class="service-info">
+                <div id="serviceCostumer"></div>
+                <div id="serviceRep"></div>
+                <div id="serviceData"></div>
+            </div>
+            <button id="finishServiceButton" class="btn-finish-service">Finish Service</button>
+        </div>
+    </div>
+    <!---->
+
+    <a href="https://www.inovaretextil.com/sistema/login/panel.html">
+        <div class='logo-container'>
+            <div class="logo"></div>
+            <span class="hover-text">Back to Home Panel <i class="fa-solid fa-house"></i></span>
+        </div>
+    </a>
+
+    <div class="getAllArea">
+        <div id="selectAllCodes">ADD ALL CODES <i class="fa-solid fa-square-plus"></i></div>
+        <div class="noResultsBackButton">SEARCH NEW CODES<i class="fa-solid fa-angles-left"></i></div>
+    </div>
+    
+
+    <div class="codesIconArea">
+        <div class="codesIcon">
+            <i class="fa-solid fa-book"></i>
+            <span class="codesIconNumber">1</span>
+        </div>
+    </div>
+    
+
+    <div id="resultsContainer">
+    </div>
+
+    <div id="onePageModal" class="modal">
+        <div class="onePageContent">
+            <div class="closeArea">
+                <div id="onePageClose" class="onePageButton close">Close <i class="fa fa-times"></i></div>
+            </div>
+            <div class="onePageInfoContainer"></div>
+            <div class="onePageButtonArea">
+                <span id="onePageAdd" class="onePageButton add">Add <i class="fa fa-plus"></i></span>
+            </div>
+            <div class="onePageImgContainer"><img id="onePageImg" src="" alt="No image available"></div>
+        </div>
+    </div>
+
+    <div id="codeListModal" class="modal">
+        <div class="codeListContent">
+            <div class="closeArea">
+                <div id="codeListClose" class="onePageButton close">Close <i class="fa fa-times"></i></div>
+            </div>
+ 
+            <div class="getAllArea">
+                <div id="codeListRemoveAll"> REMOVE ALL <i class="fa-solid fa-delete-left"></i></div>
+            </div>
+            
+            <div class="codeListMainMenu">
+
+                <div id="donwloadSection" class="codeListMainMenuItem">
+                    <button class="codeListMainMenuButton">
+                        Download <i class="fa-solid fa-circle-chevron-down"></i>
+                    </button>
+                    <div class="codeListDropdownContent">
+                            <a href='download/index.php?action=excel'><button class="codeListDropdownButton" id="excel">Excel</button></a>
+                            <a href='download/index.php?action=ficha1'><button class="codeListDropdownButton" id="ficha1">One Page Service Sheet</button></a>
+                            <a href='download/index.php?action=ficha2'><button class="codeListDropdownButton" id="ficha2">Two Page Service Sheet</button></a>
+                            <a href='download/index.php?action=ficha3'><button class="codeListDropdownButton" id="ficha3">Three Page Service Sheet</button></a>
+                    </div>
+                </div>
+                
+                <!-- <div id="editSection" class="codeListMainMenuItem">
+                    <button class="codeListMainMenuButton">
+                        Edit 
+                        <i class="fa-solid fa-circle-chevron-down"></i>
+                    </button>
+                    <div class="codeListDropdownContent">
+                        <a href='edit/index.php?action=single'><button class="codeListDropdownButton" id="singleEdit">Single Edit</button></a>
+                        <a href='edit/index.php?action=mass'><button class="codeListDropdownButton" id="massEdit">Mass Edit</button></a>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <div class="codeListContainer">
+                <h1> Code list </h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
